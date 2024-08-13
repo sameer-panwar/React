@@ -12,7 +12,6 @@ This repository is dedicated to documenting my journey as I learn React. I'll be
 - [Daily Progress](#daily-progress)
 - [Projects](#projects)
 - [Resources](#resources)
-- [License](#license)
 
 ## Getting Started
 
