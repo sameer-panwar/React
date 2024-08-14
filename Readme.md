@@ -43,11 +43,13 @@ I will be updating this section with my daily learning progress.
 ### Day 1: [2024-09-12]
 - Set up the React project using `create-react-app`.
 
-### day 2: [2024-09-14]
+### day 2: [2024-09-13]
 - Created a custom react app.
 - learned How virtual dom is created and how react works.
 
-
+### day 3: [2024-09-14]
+- learned some basics about hooks.
+- implemented useState hook in a program.
 
 ## Projects
 
