@@ -48,8 +48,20 @@ I will be updating this section with my daily learning progress.
 - learned How virtual dom is created and how react works.
 
 ### day 3: [2024-09-14]
-- learned s the basics of hooks.
+- learned the basics of hooks.
 - implemented useState hook in a program.
+
+### day 4: [2024-09-15]
+- learned about how rendering take place
+- learned how array is rendered 
+
+### day 5: [2024-09-16]
+- get introduced to tailwind css
+- implemented tailwind css in react
+
+### day 3: [2024-09-17]
+- introduced to props.
+- how it works 
 
 ## Projects
 
