@@ -63,6 +63,10 @@ I will be updating this section with my daily learning progress.
 - introduced to props.
 - how it works 
 
+### day 3: [2024-09-18]
+- created a simple background changer project.
+- using useState hooks.
+
 ## Projects
 
 As I progress, I'll be working on the following projects:
