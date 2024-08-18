@@ -64,7 +64,7 @@ I will be updating this section with my daily learning progress.
 - how it works 
 
 ### day 3: [2024-09-18]
-- created a simple background changer project.
+- created a simple background color changer project.
 - using useState hooks.
 
 ## Projects
