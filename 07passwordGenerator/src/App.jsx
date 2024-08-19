@@ -1,7 +1,4 @@
-import { useState, useCallback } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import { useState, useCallback, useEffect, useRef } from 'react'
 
 function App() {
   const [length, setLength] = useState(8)
@@ -9,6 +6,10 @@ function App() {
   const [charAllowed, setCharAllowed] = useState(false)
 
   const [password, setPassword] = useState("")
+
+  //use ref hook
+
+  const passwordRef= useRef()
 
   const passwordGenerator = useCallback(() => {
     let pass = ""
@@ -18,12 +19,20 @@ function App() {
     if (charAllowed) str += "!@#$%^&*-=_+{}[]"
 
     for (let i = 1; i <=length; i++) {
-      let char = math.floor(math.random() * str.length - 1)
+      let char = Math.floor(Math.random() * str.length - 1)
       pass += str.charAt(char)
     }
 
     setPassword(pass)
   }, [length, numberAllowed, charAllowed, setPassword])
+
+  const copyPasswordToClip= useCallback(()=>{
+      window.navigator.clipboard.writeText(password)
+  }, [password])
+
+  const showPassword = useEffect(()=>{
+    passwordGenerator()
+  },[length, numberAllowed, charAllowed, passwordGenerator])
 
   return (
     <>
@@ -36,15 +45,18 @@ function App() {
           className='outline-none w-full py-1 px-3'
           placeholder='password'
           readOnly
+          ref={passwordRef}
           />
-          <button className='outline-none bg-blue-700 text-white px-3 py-0.5 shrink-0'>Copy</button>
+          <button className='outline-none bg-blue-700 text-white px-3 py-0.5 shrink-0'
+          onClick={copyPasswordToClip}
+          >Copy</button>
         </div> 
         <div className='flex text-sm gap-x-2'>
           <div className='flex items-center gap-x-1'>
             <input 
             type='range'
             min={6}
-            max={100}
+            max={18}
             value={length}
             className='cursor-pointer'
             onChange={(e)=>{setLength(e.target.value)}}
@@ -70,6 +82,11 @@ function App() {
             <label htmlFor='charInput'>Character</label>
           </div>
         </div>
+        <div className='text-center'>
+          <button className=' text-center bg-red-500 text-black px-2 py-0.5 mt-8 mb-4 rounded-lg outline hover:bg-red-400 hover:outline-none active:bg-green-400'
+          onClick={()=>{setPassword}}
+          >Next Password</button>
+          </div>
       </div>
     </>
   )
