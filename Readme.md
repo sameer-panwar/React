@@ -59,21 +59,25 @@ I will be updating this section with my daily learning progress.
 - get introduced to tailwind css
 - implemented tailwind css in react
 
-### day 3: [2024-09-17]
+### day 6: [2024-09-17]
 - introduced to props.
 - how it works 
 
-### day 3: [2024-09-18]
+### day 7: [2024-09-18]
 - created a simple background color changer project.
 - using useState hooks.
 
+### day 8: [2024-09-19]
+- Happy Rakshabandhan guys
+- created a password generator
+- using useState, useCallback, useEffect, useRef hooks
+
+
 ## Projects
 
-As I progress, I'll be working on the following projects:
+- **Project 1**: Background Changer app
+- **Project 2**: Password Generator App
 
-- **Project 1**: Simple To-Do App
-- **Project 2**: Weather Forecast App
-- **Project 3**: Portfolio Website
 
 ## Resources
 
