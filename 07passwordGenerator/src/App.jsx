@@ -22,11 +22,13 @@ function App() {
       let char = Math.floor(Math.random() * str.length - 1)
       pass += str.charAt(char)
     }
-
+    
     setPassword(pass)
   }, [length, numberAllowed, charAllowed, setPassword])
 
   const copyPasswordToClip= useCallback(()=>{
+      //passwordRef.current?.select();
+      passwordRef.current = "sameer";
       window.navigator.clipboard.writeText(password)
   }, [password])
 
@@ -51,7 +53,7 @@ function App() {
           onClick={copyPasswordToClip}
           >Copy</button>
         </div> 
-        <div className='grid text-sm gap-x-2 sm:grid-cols-4'>
+        <div className='flex text-sm gap-x-2 sm:grid-cols-4'>
           <div className='flex items-center gap-x-1'>
             <input 
             type='range'
