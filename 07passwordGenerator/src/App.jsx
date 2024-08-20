@@ -30,7 +30,7 @@ function App() {
       window.navigator.clipboard.writeText(password)
   }, [password])
 
-  const showPassword = useEffect(()=>{
+  useEffect(()=>{
     passwordGenerator()
   },[length, numberAllowed, charAllowed, passwordGenerator])
 
@@ -38,7 +38,7 @@ function App() {
     <>
       <div className='w-full  max-w-md mx-auto shadow-md rounded-lg px-4 pb-4 my-8 text-orange-500 bg-gray-600 font-bold'>
         <h1 className='text-white text-center my-4 pt-2 text-2xl'>Password Generator</h1>
-        <div className='flex shadow rounded-lg overflow-hidden mb-4'>
+        <div className='flex shadow rounded-lg overflow-hidden mb-4 mt-6'>
           <input
           type='text'
           value={password}
@@ -51,7 +51,7 @@ function App() {
           onClick={copyPasswordToClip}
           >Copy</button>
         </div> 
-        <div className='flex text-sm gap-x-2'>
+        <div className='grid text-sm gap-x-2 sm:grid-cols-4'>
           <div className='flex items-center gap-x-1'>
             <input 
             type='range'
@@ -83,8 +83,8 @@ function App() {
           </div>
         </div>
         <div className='text-center'>
-          <button className=' text-center bg-red-500 text-black px-2 py-0.5 mt-8 mb-4 rounded-lg outline hover:bg-red-400 hover:outline-none active:bg-green-400'
-          onClick={()=>{setPassword}}
+          <button className=' text-center bg-red-500 text-black px-2 py-0.5 mt-12 mb-4 rounded-lg outline hover:bg-red-400 hover:outline-none active:bg-green-400'
+          onClick={()=>{passwordGenerator()}}
           >Next Password</button>
           </div>
       </div>
