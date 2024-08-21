@@ -30,29 +30,41 @@ function App() {
       //passwordRef.current?.select();
       passwordRef.current = "sameer";
       window.navigator.clipboard.writeText(password)
+      copy(copied)
   }, [password])
 
   useEffect(()=>{
     passwordGenerator()
   },[length, numberAllowed, charAllowed, passwordGenerator])
 
+  let copied=""
+  function copy(copied){
+    if(copied==""){
+      return copied="copied"
+    }else{
+      return copied="";
+    }
+  }
+  
+
   return (
     <>
-      <div className='w-full  max-w-md mx-auto shadow-md rounded-lg px-4 pb-4 my-8 text-orange-500 bg-gray-600 font-bold'>
-        <h1 className='text-white text-center my-4 pt-2 text-2xl'>Password Generator</h1>
-        <div className='flex shadow rounded-lg overflow-hidden mb-4 mt-6'>
-          <input
+      <div className='w-full  max-w-md mx-auto shadow-md rounded-lg px-4 pb-4 my-20 text-orange-500 bg-gray-700 font-bold'>
+        <h1 className='text-white text-center mt-6 pt-2 text-2xl'>Password Generator</h1>
+        <div className='flex shadow rounded-lg overflow-hidden mb-4 mt-8'>
+          <input 
           type='text'
           value={password}
-          className='outline-none w-full py-1 px-3'
+          className='text-black outline-none w-full py-1 px-3'
           placeholder='password'
           readOnly
           ref={passwordRef}
           />
           <button className='outline-none bg-blue-700 text-white px-3 py-0.5 shrink-0'
-          onClick={copyPasswordToClip}
+          onClick={copyPasswordToClip()}
           >Copy</button>
         </div> 
+        <div>{copied}</div>
         <div className='flex text-sm gap-x-2 sm:grid-cols-4'>
           <div className='flex items-center gap-x-1'>
             <input 
@@ -85,7 +97,7 @@ function App() {
           </div>
         </div>
         <div className='text-center'>
-          <button className=' text-center bg-red-500 text-black px-2 py-0.5 mt-12 mb-4 rounded-lg outline hover:bg-red-400 hover:outline-none active:bg-green-400'
+          <button className='font-medium text-center bg-green-700 text-white px-8 py-1.5 mt-20 mb-4 rounded-lg  hover:bg-green-400 hover:text-black transition-all active:bg-red-r00'
           onClick={()=>{passwordGenerator()}}
           >Next Password</button>
           </div>
