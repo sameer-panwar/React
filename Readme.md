@@ -75,8 +75,8 @@ I will be updating this section with my daily learning progress.
 
 ## Projects
 
-- **Project 1**: Background Changer app
-- **Project 2**: Password Generator App
+- **Project 1**: Background Changer
+- **Project 2**: Password Generator
 
 
 ## Resources
