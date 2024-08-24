@@ -77,6 +77,7 @@ I will be updating this section with my daily learning progress.
 
 - **Project 1**: Background Changer
 - **Project 2**: Password Generator
+- **Project 2**: Currency Changer
 
 
 ## Resources
