@@ -1,6 +1,6 @@
 import { useState } from "react";
 
-let nextId=0;
+let nextId=2;
 
 export default function List(){
     const [name, setName]=useState('');
